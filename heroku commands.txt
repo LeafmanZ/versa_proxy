@@ -1,0 +1,25 @@
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+$ heroku login
+
+Create a new Git repository
+Initialize a git repository in a new or existing directory
+
+$ cd my-project/
+$ git init
+$ heroku git:remote -a zieleman1
+
+Commit your code to the repository and deploy it to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+For existing repositories, simply add the heroku remote
+
+$ heroku git:remote -a zieleman1
+
+For those getting odd path references in requirements.txt, use:
+
+pip list --format=freeze > requirements.txt
+
